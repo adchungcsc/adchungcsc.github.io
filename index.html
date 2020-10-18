@@ -1,41 +1,27 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to our CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>FaceCOVmon</title>
+  </head>
+  <body>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- place to put the live webcam video stream -->
+    <video id="video" width="600" height="450" autoplay="true"></video>
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <!-- later we will use this #canvas to draw bounding box around our face -->
+    <canvas id="canvas"></canvas>
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
+    
+    <!-- IMPORTANT Links -->
+    <!-- Link to the face-api script file -->
+    <script defer src="./face-api.min.js"></script>
+    <!-- Link to our script.js file -->
+    <script defer src="./script.js"></script>
+    <p id="detected">faceCOVmon is starting up. Please wait</p>
+  </body>
 
 </html>
